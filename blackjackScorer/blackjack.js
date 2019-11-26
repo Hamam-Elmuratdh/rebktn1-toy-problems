@@ -17,12 +17,25 @@ Examples
 function blackJack(array){
 	var count = 0;
 	var result = []
+	var Aas= 0;
 	for (var i = 0; i < array.length; i ++){
-		if (array [i] = 'Q' || array[i] = 'K'|| arra[i] = 'J')
+	if (array[i]!== 'A'){
+		if (array [i] === 'Q' || array[i] === 'K'|| arra[i] === 'J')
 			count += 10;
+		else
+			count+= parseInt(array[i])
+	}
+	else 
+		Aas++;
+
+	if (count + Aas >=21){
+		return count + Aas;
+	}
+	while (count + 11+(Aas -1) <21){
+		count +=11 ;
+		Aas--;
+
+	}
+	return Aas + count; 
 }
-//if A equals the same element in the iput push A to result
-// itterate again over the array if the count equal or less than 21 we will add 11 to it 
-// else we will add 1 
-//return count
 }
