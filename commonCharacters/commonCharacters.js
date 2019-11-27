@@ -13,5 +13,14 @@
 
 
 var commonCharacters = function(string1, string2) {
-  // TODO: Your code here!
+  var common = [];
+  s1.splice('');
+  s2.splice('');
+  for (var i =0; i < s1.length; i ++){
+if (s2 include(s1[i])){
+// include do not work!
+	common.push(s2[i])
+}
+ }
+   return common.join('');
 };
