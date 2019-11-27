@@ -10,17 +10,16 @@
  * Extra credit: Extend your function to handle more than two input strings.
  */
 
-
-
 var commonCharacters = function(string1, string2) {
   var common = [];
-  s1.splice('');
-  s2.splice('');
+  var s1 = string1.split('');
+  var s2 = string2.split('');
   for (var i =0; i < s1.length; i ++){
-if (s2 include(s1[i])){
-// include do not work!
-	common.push(s2[i])
+if (s2 .includes(s1[i])){
+	common.push(s1[i])
 }
  }
    return common.join('');
 };
+
+
