@@ -1,4 +1,5 @@
-// Given an array X of positive integers, its elements are to be transformed by running the following operation on them as many times as required:
+// Given an array X of positive integers, its elements are to be transformed by running the 
+//following operation on them as many times as required:
 
 // if X[i] > X[j] then X[i] = X[i] - X[j]
 
@@ -27,4 +28,8 @@
 
 // Additional notes:
 
-// There are performance tests consisted of very big numbers and arrays of size at least 30000. Please write an efficient algorithm to prevent timeout.
+// There are performance tests consisted of very big numbers and arrays of size at least 30000.
+// Please write an efficient algorithm to prevent timeout.
+function sPsum(array){
+
+}
