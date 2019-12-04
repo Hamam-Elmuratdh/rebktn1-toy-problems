@@ -27,10 +27,14 @@
 // Given numbers will be positive.
 function dec2FactString(nb){
 	var result = ''; 
-	for (var i = 0; i < nb.length; i++) {
+	/*for (var i = 0; i < nb.length; i++) {
 		nb! = nb * (nb-1)*2*1;
-		nb.push(result)
-	}
-	return result;
+		
+	}*/
+	// i could not applay inversion table and Lehmer code to this function 
+//
 
-}
+
+
+//
+
