@@ -14,7 +14,7 @@ characterFrequency("") -->  [ ]
 function characterFrequency(str){
 	var result = [];
 	frequant = {};
-	for (var i =0; i < str.ength; i++)
+	for (var i =0; i < str.length; i++)
 		if (frequant[str[i]]){
 			 frequant [str[i]]++;
 			 }else{
@@ -23,6 +23,9 @@ function characterFrequency(str){
 	for ( var key in frequant){
 		result.push([key, frequant[key]])
 	}
-	return result;
-	}
+	return result.sort(function(x,y){
+		var z = y[1] - x[1]
+		
+		return  z;
+}
 // i should sort and return the out put so the numbers be in order but i did not know how to do it.
