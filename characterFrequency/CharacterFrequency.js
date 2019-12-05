@@ -11,3 +11,18 @@ characterFrequency("mississippi")  -->  [ [ "i", 4 ], [ "s", 4 ], [ "p", 2 ], [ 
 
 characterFrequency("") -->  [ ]
 */
+function characterFrequency(str){
+	var result = [];
+	frequant = {};
+	for (var i =0; i < str.ength; i++)
+		if (frequant[str[i]]){
+			 frequant [str[i]]++;
+			 }else{
+			 frequant [str[i]] = 1; 	
+			 }
+	for ( var key in frequant){
+		result.push([key, frequant[key]])
+	}
+	return result;
+	}
+// i should sort and return the out put so the numbers be in order but i did not know how to do it.
