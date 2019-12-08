@@ -1,10 +1,13 @@
 /*
 
-In order to prove it's success and gain funding, the wilderness zoo needs to prove to environmentalists that it has x number of mating pairs of bears.
+In order to prove it's success and gain funding, the wilderness 
+//zoo needs to prove to environmentalists that it has x number of mating pairs of bears.
 
-You must check within string (s) to fid all of the mating pairs, and return a string containing only them. Line them up for inspection.
+You must check within string (s) to fid all of the mating pairs, and return a string containing only them.
+// Line them up for inspection.
 
-Rules: Bears are either 'B' (male) or '8' (female), Bears must be together in male/female pairs 'B8' or '8B', Mating pairs must involve two distinct bears each ('B8B' may look fun, but does not count as two pairs).
+Rules: Bears are either 'B' (male) or '8' (female), Bears must be together in male/female pairs 'B8' or '8B',
+ Mating pairs must involve two distinct bears each ('B8B' may look fun, but does not count as two pairs).
 
 Return an array containing a string of only the mating pairs available. e.g:
 
@@ -16,7 +19,24 @@ and true if the number is more than or equal to x, false if not:
 
 x will always be a positive integer, and s will never be empty
 
-- regular expression is not allow 
+- regular expression are not allowed
 
 
 */
+function pairsOfBears(s, x = 0){
+var result = [];
+var count = 0;
+var i = 0;
+for (i = 0; i <s.length; i++) {
+if (s[i] === "8" && s[i] === "B"){
+	count++
+}
+if (s[i] === "B" && s[i] === "8"){
+	count++
+	
+}
+}
+
+
+return result pairsOfBears(s,x)  
+}
