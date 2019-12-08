@@ -23,20 +23,16 @@ x will always be a positive integer, and s will never be empty
 
 
 */
-function pairsOfBears(s, x = 0){
-var result = [];
+function pairsOfBears(s,x){
+var result = '';
 var count = 0;
-var i = 0;
-for (i = 0; i <s.length; i++) {
-if (s[i] === "8" && s[i] === "B"){
-	count++
-}
-if (s[i] === "B" && s[i] === "8"){
-	count++
-	
-}
+for (var i = 0; i <s.length; i++) {
+if ((s[i] === "8" && s[i + 1] === "B") || (s[i] === "B" && s[i + 1] === "8")){
+	count++;
+	result += s[i] + s[i + 1];
 }
 
-
-return result pairsOfBears(s,x)  
+  
+}
+return [result, true] 
 }
