@@ -12,4 +12,30 @@
   *
   */
 var deepEquals = function(apple, orange) {
+  var key1= Object.keys(apple)
+  var key2 = Object.keys(orange)
+  var equal = true; 
+ var applen = Object.keys(apple).length
+ var orlen = Object.keys(orange).length
+ if (applen !== orlen){
+  return false; 
+ }else{
+for (var i = 0; i < applen; i ++){
+if(key1[i] !== key2[i]){
+  return false;
+ }
+ if (key1[i] !== key2[i]){
+  if (typeof apple[key1[i]] !== 'object'){
+    if (apple [key1[i]]!== orange[key1[i]]){
+      return false; 
+    }
+  }else{
+    equal = deepEquals (apple[key1[i]], orange[key2[i]])
+  }
+ }
+}
+} 
+return equal;
+
+
 };
