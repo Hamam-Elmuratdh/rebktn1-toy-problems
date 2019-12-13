@@ -11,4 +11,13 @@ parseQueryString("http://example.com") // undefined
 */
 
 function parseQueryString(url) {
-}
+	url = decodeURI(url)
+	url = url.slice(url.indexOf('?') + 1)
+	url = url.split('&')
+	for (var i = 0; i < url.length; i++){
+		url[i].split('=')
+	}
+	return url;
+	}
+		
+

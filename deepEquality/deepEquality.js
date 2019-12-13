@@ -24,18 +24,18 @@ for (var i = 0; i < applen; i ++){
 if(key1[i] !== key2[i]){
   return false;
  }
- if (key1[i] !== key2[i]){
-  if (typeof apple[key1[i]] !== 'object'){
+ if (key1[i] !== key2[i])
+  return false;
+  else if (typeof apple[key1[i]] !== 'object'){
     if (apple [key1[i]]!== orange[key1[i]]){
       return false; 
     }
   }else{
     equal = deepEquals (apple[key1[i]], orange[key2[i]])
   }
- }
+ 
 }
 } 
-return equal;
+return equal;}
 
 
-};
