@@ -34,6 +34,9 @@
 'use strict';
 
 var compose = function() {
+	greet(exclaim(welcome(){
+		
+	}))
 };
 
 var pipe = function() {
