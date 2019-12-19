@@ -7,18 +7,18 @@
   * for which the filter returns true.
   *
   * Example:
-  *   var root1 = new Tree(1);
-  *   var branch2 = root1.addChild(2);
-  *   var branch3 = root1.addChild(3);
-  *   var leaf4 = branch2.addChild(4);
-  *   var leaf5 = branch2.addChild(5);
-  *   var leaf6 = branch3.addChild(6);
-  *   var leaf7 = branch3.addChild(7);
-  *   root1.BFSelect(function (value, depth) {
-  *     return value % 2;
-  *   })
-  *   // [1, 3, 5, 7]
-  *
+     var root1 = new Tree(1);
+     var branch2 = root1.addChild(2);
+     var branch3 = root1.addChild(3);
+     var leaf4 = branch2.addChild(4);
+     var leaf5 = branch2.addChild(5);
+     var leaf6 = branch3.addChild(6);
+     var leaf7 = branch3.addChild(7);
+     root1.BFSelect(function (value, depth) {
+       return value % 2;
+     })
+     // [1, 3, 5, 7]
+  
   *   root1.BFSelect(function (value, depth) {
   *     return depth === 1;
   *   })
@@ -39,6 +39,22 @@ var Tree = function(value) {
 
 Tree.prototype.BFSelect = function(filter) {
   // return an array of values for which the function filter(value, depth) returns true
+  var result = [];
+  var depth = 0; 
+  var find = this;
+  for (var i =0; i<find.length; i++){
+    var node = find.shift()
+  }
+  if (node.value, node.depth){
+    result.push(node.value)
+  }
+  for (var j = 0; j < node.children; j++){
+    for (var x =0; x <child.depth;){
+      child.depth[i] = node.depth [x+1] ;
+    }
+  }
+return result;
+
 };
 
 /**
@@ -94,3 +110,22 @@ Tree.prototype.removeChild = function(child) {
     throw new Error('That node is not an immediate child of this tree');
   }
 };
+
+
+ var root1 = new Tree(1);
+     var branch2 = root1.addChild(2);
+     var branch3 = root1.addChild(3);
+     var leaf4 = branch2.addChild(4);
+     var leaf5 = branch2.addChild(5);
+     var leaf6 = branch3.addChild(6);
+     var leaf7 = branch3.addChild(7);
+     root1.BFSelect(function (value, depth) {
+       return value % 2;
+     })
+     [1, 3, 5, 7]
+
+
+      root1.BFSelect(function (value, depth) {
+       return value % 2;
+     })
+      [1, 3, 5, 7]
