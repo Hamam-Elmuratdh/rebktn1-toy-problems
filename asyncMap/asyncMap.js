@@ -39,4 +39,28 @@
 
 
 var asyncMap = function(tasks, callback) {
+	tasks.map(function(task,index,tasks){
+		if(index===task.length-1){
+			task(cb);
+			callback(task)
+		}
+	})
+
 };
+asyncMap([
+  function(cb){
+     setTimeout(function(){
+       cb('one');
+     }, 200);
+   },
+  function(cb){
+     setTimeout(function(){
+       cb('two');
+     }, 100);
+   }
+  ],
+   function(results){
+     // the results array will equal ['one','two'] even though
+     console.log(results); // ['one', 'two']     // the second function had a shorter timeout.
+
+  });
