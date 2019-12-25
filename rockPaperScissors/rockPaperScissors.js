@@ -21,4 +21,18 @@
 var rockPaperScissors = function (
 ) {
   // TODO: your solution here
+  var result = [];
+  var round = ["R","S","P"]
+  for (var i = 0; i<round.length; i++){
+  	for ( var j = 0; j<round.length; j++){
+  		for(var x =0 ; x<round.length; x++){
+  			var array = [];
+  			array.push(round[i],round[j],round[x])
+  			result.push(array)
+  		}
+  	}
+  }
+  return result
+
+  
 };
