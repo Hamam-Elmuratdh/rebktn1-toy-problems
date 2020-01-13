@@ -36,9 +36,25 @@ spiralTraversal([
   [ 22, 23, 24 ] 
 ])	
 
-// output: [ 1, 2, 3, 6, 9, 12, 15, 18, 21, 24, 23, 22, 19, 16, 13, 10, 7, 4, 5, 8, 11, 14, 17, 20 ]
+// output: [ 1, 2, 3 6, 9, 12, 15, 18, 21, 24, 23, 22, 19, 16, 13, 10, 7, 4, 5, 8, 11, 14, 17, 20 ]
 
 spiralTraversal([[ 1 ], [ 2 ], [ 3 ], [ 4 ]])	// [ 1, 2, 3, 4 ]
 
 spiralTraversal([[ 1, 2, 3, 4, 5, 6, 7 ]]) // [ 1, 2, 3, 4, 5, 6, 7 ]
 */
+function spiralTraversal(array) {
+  var result = [];
+  var row;
+  for (var i = 0; i < array.length; i++) {
+    row = array[i];
+    for (var j = 0; j < array.lenght; j++) {
+      result.push(array[i][j]);
+    }
+    array.splice(0, 1);
+    for (var j = 0; j < array.lenght; j++) {
+      var sprial = row[row.length - 1];
+      result.push(sprial);
+      row.splice(sprial, 1);
+    }
+  }
+}
