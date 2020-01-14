@@ -19,7 +19,7 @@ function arrayception(matrix){
   var result = 0; 
   for(var i = 0; i <matrix.lenght; i ++){
     for( var j =0 ; j <matrix.length; j++){
-    if (!Array.isArray){
+    if (!Array.isArray(matrix[i][j])){
 return matrix
     }
     }
