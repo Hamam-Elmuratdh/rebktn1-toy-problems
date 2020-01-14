@@ -24,5 +24,5 @@ return matrix
     }
     }
   }
-  return matrix.push(result);
+  return matrix.push(result)
 }
