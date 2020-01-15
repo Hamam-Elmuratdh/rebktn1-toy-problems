@@ -32,7 +32,24 @@ root.countLeaves(); // 3
 var Tree = function(value) {
   this.value = value;
   this.children = [];
+
 };
+
+
+Tree.prototype.countLeaves = function (node) {
+  count = 0;
+  function find(nodes) {
+    if (this.children === 0) {
+      count++
+    }
+    for (var i = 0; i < nodes.children.length; i++) {
+
+      find(nodes.children[i])
+    }
+
+    return count
+  }
+
 
 /**
  * You shouldn't need to change anything below here, but feel free to look.
